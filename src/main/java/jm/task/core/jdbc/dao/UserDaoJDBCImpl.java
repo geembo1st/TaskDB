@@ -79,7 +79,7 @@ public class UserDaoJDBCImpl implements UserDao {
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
-                users.add(new User(resultSet.getLong("id"), resultSet.getString("name"), resultSet.getString("lastName"),
+                users.add(new User(resultSet.getString("name"), resultSet.getString("lastName"),
                         resultSet.getByte("age")));
             }
 
